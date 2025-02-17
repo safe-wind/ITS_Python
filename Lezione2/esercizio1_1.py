@@ -1,3 +1,5 @@
+#es1_1
+
 x : float = float(input("Inserisci un numero: "))
 y : float = 1.0/x
 print(x, y)
