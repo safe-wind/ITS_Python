@@ -11,18 +11,17 @@ rimosso1: str= invited.pop(0)
 print(f"{rimosso1} purtroppo la cena è stata rimandata")
 '''
 
-print(invited[0])
-invited.pop(0)
-print(f"{invited[0]} purtroppo la cena è stata rimandata")
-invited.pop(0)
-print(f"{invited[0]} purtroppo la cena è stata rimandata")
-invited.pop(0)
-print(f"{invited[0]} purtroppo la cena è stata rimandata")
-invited.pop(0)
-print(f"{invited[0]} purtroppo la cena è stata rimandata")
-invited.pop(0)
-print(f"{invited[0]} purtroppo la cena è stata rimandata")
-
+rimosso1 : str = invited.pop(0)
+print(f"{rimosso1} purtroppo la cena è stata rimandata")
+rimosso2 : str = invited.pop(0)
+print(f"{rimosso2} purtroppo la cena è stata rimandata")
+rimosso3 : str = invited.pop(0)
+print(f"{rimosso3} purtroppo la cena è stata rimandata")
+rimosso4 : str = invited.pop(0)
+print(f"{rimosso4} purtroppo la cena è stata rimandata")
+rimosso5 : str = invited.pop(0)
+print(f"{rimosso5} purtroppo la cena è stata rimandata")
+ 
 for i in invited:
 
     print(f"{i} il tavolo per la cena non si libererà in tempo per la cena. Ci sarà posto solo per due")
