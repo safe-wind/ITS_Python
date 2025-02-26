@@ -1,18 +1,15 @@
 #esercizio3C_9
 
 
-cont=0
-
 coordinate: list[int] = []
 
-while cont < 2:
 
-    coordinataX : int = int(input("Inserisci coordinata X: "))
-    coordinate.append(coordinataX)
-    cont+=1
-    coordinataY : int = int(input("Inserisci coordinata Y: "))
-    coordinate.append(coordinataY)
-    cont+=1
+coordinataX : int = int(input("Inserisci coordinata X: "))
+coordinate.append(coordinataX)
+
+coordinataY : int = int(input("Inserisci coordinata Y: "))
+coordinate.append(coordinataY)
+
 
 coordinate_agg : tuple = tuple(coordinate)
 
