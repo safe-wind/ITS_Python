@@ -6,7 +6,7 @@ mese: int = int(input("Inserisic un mese: "))
 
 festivo: list[int] = [giorno, mese]
 
-festivo:tuple= tuple(festivo)
+festivo: tuple = tuple(festivo)
 
 match festivo:
 
