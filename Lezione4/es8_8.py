@@ -20,18 +20,14 @@ while True:
 
         name:str = str(input("Inserisci artista: "))
         album:str = str(input("Inserisci album: "))
-        songs:str = str(input("Sai quante canzoni sono? (0 se non lo sai): "))
-        if songs == 0:
-            songs==None
-        else:
-            continue
-
-        print(makeAlbum())
+        songs:str = str(input("Sai quante canzoni sono? (None se non lo sai): "))
+        
+        print(makeAlbum(name, album, songs))
 
     if scelta == "quit":
+        print("Programma terminato")
         break
 
-print(makeAlbum(name, album, songs))
     
 
 
