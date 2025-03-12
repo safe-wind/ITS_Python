@@ -18,7 +18,7 @@
 # 'l'utente non seleziona "esci".
 
 liberi:int = 20
-occupati = 0
+occupati:int = 0
 
 while True:
 
