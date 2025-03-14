@@ -3,11 +3,11 @@
 # as it’s printed. After calling the function, print both of your
 # lists to make sure the messages were moved correctly.
 
-global sent_messages
+
 sent_messages:list[str] = []
 
 def send_messages(par:list[str], par1:list[str]) ->str:
-
+    
     for i in par:
 
         mess = i
