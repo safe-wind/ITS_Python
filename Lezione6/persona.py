@@ -2,9 +2,9 @@
 
 class Persona: #nome cognome ed eta sono attributi della classe persona
 
-    #come posso renderli in python
+    #come posso renderli in python:
     #self.age
-    #elf.name
+    #self.name
     #self.lastname
 
     #definisco un costruttore
@@ -17,8 +17,10 @@ class Persona: #nome cognome ed eta sono attributi della classe persona
     #funzione che mi consente di ritornare il valore self.name
     def getName(self) -> str:
         return self.name
+    #funzione che mi consente di ritornare il valore self.last_name
     def getLastName(self) -> str:
         return self.last_name
+    #funzione che mi consente di ritornare il valore self.age
     def getAge(self) -> int:
         return self.age
         
