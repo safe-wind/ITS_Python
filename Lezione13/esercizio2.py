@@ -6,13 +6,13 @@
 
 def amountDeposit(m:float, t:int) -> float:
 
-    if m == 0:
+    if m <= 0:
         return "No funds"
     if t == 0:
-        return m
+        return round(m, 2)
     else:
         i_comp = 1.005 * amountDeposit(m,t-1)
 
         return round(i_comp, 2)
         
-print(amountDeposit(100,12))
+print(amountDeposit(1000, 3))
