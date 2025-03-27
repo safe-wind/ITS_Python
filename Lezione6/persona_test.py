@@ -13,17 +13,19 @@ print(mg.age)
 from persona2 import Persona
 #creo un oggetto mg di tipo persona
 
-mg:Persona = Persona()
+#mg:Persona = Persona()
+
+mg = Persona()
 
 #richiamo la funzione displayData() 
 
-mg.displayData()
+#mg.displayData()
 
 #impostare il nome della persona mg
 
 mg.setName("Marius")
 
-mg.displayData()
+#mg.displayData()
 
 #impostare cognome persona mg
 
@@ -32,9 +34,10 @@ mg.setLastName("Gidilica")
 #impostare eta della persona mg
 
 mg.setAge(23)
-mg.displayData()
+#mg.displayData()
 
-print(mg.getName(), mg.getLastName(), mg.getAge())
+
+print(mg)
 
 
 
