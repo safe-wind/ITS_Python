@@ -13,7 +13,8 @@ class Persona: #nome cognome ed eta sono attributi della classe persona
         self.name = name
         self.last_name = last_name
         self.age = age
-    
+    def __str__(self) -> str:
+        return f"Nome: {self.name}\nCognome: {self.last_name}\nAge: {self.age}"
     #funzione che mi consente di ritornare il valore self.name
     def getName(self) -> str:
         return self.name
