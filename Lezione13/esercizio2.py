@@ -4,7 +4,7 @@
 # Scrivere una funzione ricorsiva compoundInterest che calcoli la somma presente sul conto 
 # dopo t mesi data una somma di partenza m.
 
-def amountDeposit(m:float, t:int):
+def amountDeposit(m:float, t:int) -> float:
 
     if m == 0:
         return "No funds"
