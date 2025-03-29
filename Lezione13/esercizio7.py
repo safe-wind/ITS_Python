@@ -8,6 +8,6 @@ def produttoria(n:int, prodotto:int = 3) -> int:
     if n <= 0:
         return 1
     else:
-        return (n*3) * produttoria(n-1, prodotto)
+        return (n*prodotto) * produttoria(n-1, prodotto)
 
 print(produttoria(5))

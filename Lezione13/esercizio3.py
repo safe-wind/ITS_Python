@@ -7,14 +7,13 @@
 
 
 def recursiveFactorial(n:int) -> int:
-    factorial = 1
     
     if n <= 0:
-        return factorial
+        return 1
     
     else:
         
         return n * recursiveFactorial(n-1)
     
 
-#print(recursiveFactorial(3))
+print(recursiveFactorial(5))
