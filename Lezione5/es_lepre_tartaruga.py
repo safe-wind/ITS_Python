@@ -7,29 +7,31 @@
 
 from random import randint
 
-global percorso
-percorso = ["_"]*70
 
-def percorso():
+def percorso(mossaT:int, mossaL:int) -> list[str]:
+    if mossaT == mossaL:
+        print("OUCH!")
     percorso = ["_"]*70
     return percorso
 
-def tartaruga(mossa, posizione:int = 1):
+def tartaruga(posizione:int = 1):
+
 
     while posizione < 70:
-        mosseT = randint(0, 10)
+        mossaT = randint(0, 10)
         pass
                 
 
 
-def lepre(mossa, posizione:int = 1):
+def lepre(posizione:int = 1):
 
-    mosseL = randint(0, 10)
     while posizione < 70:
+        mossaL = randint(1,10)
+        #match mossaL:
         pass
 
 
-print(percorso(table = [range(70)]))
+print(percorso(mossaL=1, mossaT=1))
 
 
 #gioco
