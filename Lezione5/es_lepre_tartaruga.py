@@ -28,11 +28,29 @@ def lepre(posizione:int = 1):
 
     while posizione < 70:
         mossaL = randint(1,10)
-        #match mossaL:
-        pass
+        if mossaL >= 1 and mossaL<= 2:#riposo
+            posizione+=0
+        elif mossaL >=3 and mossaL<=4:#grande balzo
+            posizione+=9
+        elif mossaL==5:#grande scivolata
+            posizione-=12
+            if posizione < 1:
+                posizione = 1
+        elif mossaL >= 6 and mossaL<=8:#piccolo balzo
+            posizione += 1
+        else: #piccola scivolata
+            posizione-=2
+            if posizione < 1:
+                posizione=1
+    
+        if posizione == 70:
+            print("GAME WIN")
+        count_l += 1
+
+        
 
 
-print(percorso(mossaL=1, mossaT=1))
+print(lepre())
 
 
 #gioco
