@@ -3,67 +3,82 @@
 
 
 from random import randint
-table = ["_"]*70
 
-def percorso(mossaT:int, mossaL:int) -> list[str]:
-    if mossaT == mossaL:
-        print("OUCH!")
-    
+tartaruga=1
+lepre = 1
 
-def tartaruga(posizione:int = 1):
-    tar = "T"
-    count_t = 0
-    
-    mossaT = randint(1, 10)
-    
-    if mossaT >= 1 and mossaT<=5:
-        posizione += 3
-    elif mossaT >= 6 and mossaT<=7:
-        posizione-=6
-        if posizione<1:
-            posizione=1
+
+def mostra_posizioni(tartaruga, lepre):
+    tabellone = ['_'] * 70 
+
+    pos_tartaruga = min(tartaruga, 70)
+    pos_lepre = min(lepre, 70)
+
+    if pos_tartaruga == pos_lepre:
+        tabellone[pos_tartaruga-1] = 'OUCH!!!'
+
     else:
-        posizione+=1
+        tabellone[pos_tartaruga-1] = 'T'
+        tabellone[pos_lepre-1] = 'H'
 
-    pass
-                
+    print(''.join(tabellone))
 
+def muovi_tartaruga(tartaruga):
+    mossa = randint(1, 10)
 
-def lepre(posizione:int = 1):
-    lep = "L"
-    count_l = 0
-
-    while posizione < 70:
-        mossaL = randint(1,10)
-        if mossaL >= 1 and mossaL<= 2:#riposo
-            posizione+=0
-        elif mossaL >=3 and mossaL<=4:#grande balzo
-            posizione+=9
-        elif mossaL==5:#grande scivolata
-            posizione-=12
-            if posizione < 1:
-                posizione = 1
-        elif mossaL >= 6 and mossaL<=8:#piccolo balzo
-            posizione += 1
-        else: #piccola scivolata
-            posizione-=2
-            if posizione < 1:
-                posizione=1
+    if 1 <= mossa <= 5:
+        tartaruga += 3  # Passo veloce
     
-        if posizione == 70:
-            print("GAME WIN")
-        count_l += 1
+    if 6 <= mossa <= 7:
+        tartaruga -= 6  # Scivolata
+        if tartaruga < 1:
+            tartaruga=1
+    
+    if 8 <= mossa <= 10 :
+        tartaruga += 1 # Passo lento
 
+    return tartaruga
         
+def muovi_lepre(lepre):
+    mossa = randint(1, 10)
+
+    if 1 <= mossa <= 2:
+        lepre += 0  # Riposo
+        
+    elif 3 <= mossa <= 4 :
+        lepre += 9  # Grande balzo
+        
+    elif mossa == 5 :
+        lepre -= 12 # Grande scivolata
+        if lepre < 1:
+            lepre = 1
+
+    elif 6 <= mossa <= 8 :
+        lepre += 1  # Piccolo balzo
+
+    elif 9 <= mossa <= 10 :
+        lepre -= 2  # Piccola scivolata
+        if lepre < 1:
+            lepre = 1
+    return lepre
 
 
-print(lepre())
 
+print("BANG !!!!!")
+print("AND THEY'RE OFF !!!!!")
 
-#gioco
+while tartaruga < 70 and lepre < 70:
+    
+    tartaruga = muovi_tartaruga(tartaruga)  # Aggiorno posizione tartaruga
+    lepre = muovi_lepre(lepre)  # Aggiorno posizione lepre
+    
+    mostra_posizioni(tartaruga, lepre)
 
-while True:
-    print("BANG! AND THEY'RE OFF!!")
-    tartaruga()
-    lepre()
-    break
+    if tartaruga >= 70 or lepre >= 70:
+        if tartaruga >= 70 and lepre >= 70:
+            print("It's a tie.")
+        elif tartaruga >= 70:
+            print("TORTOISE WINS! || YAY!!!")
+        elif lepre >= 70:
+            print("Hare wins. Yuch.")
+        break
