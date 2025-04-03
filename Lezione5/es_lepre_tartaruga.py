@@ -1,30 +1,37 @@
-# percorso = 70 quadrati
-# posizione = 1 quadrato 
-# traguardo = 70
-# if gareggiatore >= 70 ---> WIN!
 
-# orologio = 0
+
+
 
 from random import randint
-
+table = ["_"]*70
 
 def percorso(mossaT:int, mossaL:int) -> list[str]:
     if mossaT == mossaL:
         print("OUCH!")
-        
-    percorso = ["_"]*70
-    return percorso
+    
 
 def tartaruga(posizione:int = 1):
+    tar = "T"
+    count_t = 0
+    
+    mossaT = randint(1, 10)
+    
+    if mossaT >= 1 and mossaT<=5:
+        posizione += 3
+    elif mossaT >= 6 and mossaT<=7:
+        posizione-=6
+        if posizione<1:
+            posizione=1
+    else:
+        posizione+=1
 
-
-    while posizione < 70:
-        mossaT = randint(0, 10)
-        pass
+    pass
                 
 
 
 def lepre(posizione:int = 1):
+    lep = "L"
+    count_l = 0
 
     while posizione < 70:
         mossaL = randint(1,10)
@@ -57,4 +64,6 @@ print(lepre())
 
 while True:
     print("BANG! AND THEY'RE OFF!!")
+    tartaruga()
+    lepre()
     break
