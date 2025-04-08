@@ -6,7 +6,7 @@
 def vowelsRemover(text:str) -> str:
     text_no_vowels = ""
 
-    if len(text) - len(text_no_vowels) <= len(text_no_vowels):
+    if len(text) == 0:
         return text_no_vowels
     
     first_letter = text[0].lower()
@@ -17,4 +17,4 @@ def vowelsRemover(text:str) -> str:
     return text_no_vowels + vowelsRemover(text[1:])
     
 
-print(vowelsRemover("ciaocicc"))
+print(vowelsRemover("ccccicc"))
