@@ -4,6 +4,6 @@
 # Esercizio 5.2: Adatta la RegEx per accettare anche il formato gg-mm-aaaa.
 
 #esercizio 5.1
-[0-9]{2}/?[0-9]{2}/?[0-9]{4}
+[0-9]{2}/[0-9]{2}/[0-9]{4}
 #esercizio 5.2
-[0-9]{2}-?[0-9]{2}-?[0-9]{4}
+[0-9]{2}-[0-9]{2}-[0-9]{4}
