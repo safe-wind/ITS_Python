@@ -6,4 +6,4 @@
 #esercizio 3.1
 \S+@\S+
 #esercizio 3.2
-\W+@[a-z]+^.$[a-z]{2}\.[a-z]{2}
+\W+@[a-z]+^.[a-z]{2}\.[a-z]{2}
