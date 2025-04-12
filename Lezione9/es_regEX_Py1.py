@@ -14,12 +14,12 @@ import re
 
 def is_integer(s):
 
-    pattern = r"-?/d?=."
+    pattern = re.fullmatch(r"-?[0-9]+", s)
 
-    return re.fullmatch(pattern, s)
+    return bool(pattern)
 
 
-print(is_integer("123"))
+print(is_integer("-456"))
 
 
 
