@@ -10,5 +10,19 @@
 # is_integer("-456")     # True
 # is_integer("12.3")     # False
 
+import re
+
+def is_integer(s):
+
+    pattern = r"-?/d?=."
+
+    return re.fullmatch(pattern, s)
+
+
+print(is_integer("123"))
+
+
+
+
 
 
