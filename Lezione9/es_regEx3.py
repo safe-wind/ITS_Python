@@ -4,6 +4,6 @@
     # Esercizio 3.2: Estendi la RegEx per accettare anche domini con più estensioni, es. nome@dominio.co.uk.
 
 #esercizio 3.1
-\S+@\S+
+[a-z]+@[a-z]+\.[a-z]{2,3}
 #esercizio 3.2
-\W+@[a-z]+^.[a-z]{2}\.[a-z]{2}
+[a-z\.]+@[a-z]+\.[a-z]{2}\.[a-z]{2}
