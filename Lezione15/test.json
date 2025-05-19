@@ -1,0 +1,12 @@
+{
+    "nome": "Mario Rossi",
+    "età": 30,
+    "email": "mario.rossi@example.com",
+    "interessi": ["lettura", "viaggi", "tecnologia"],
+    "iscrizioneAttiva": true,
+    "indirizzo": {
+      "via": "Via Roma, 123",
+      "città": "Milano",
+      "CAP": "20100"
+    }
+  }
