@@ -10,8 +10,8 @@ class Telefono:
 
         if not re.fullmatch(r"\+*[0-9]+{5,10}", tel):
             raise ValueError(f"Formato non corretto. Riprova. ({tel=})")
-        
         else:
+
             self._tel = tel
 
     def getTel(self) -> str:
@@ -22,8 +22,6 @@ class Telefono:
     
     def __eq__(self,other) -> bool:
 
-        if hash(self) != hash(other):
-            return None
-        else:
-            return self.getTel(self) == self.getTel(other)
+        return isinstance(self.getTel() == other.getTel())
+
         
