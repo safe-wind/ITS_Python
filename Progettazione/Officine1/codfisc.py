@@ -22,7 +22,7 @@ class CodiceFiscale:
     
     def __eq__(self, other):
         if other is None or not isinstance(other, type(self)) or hash(other) != hash(self):
-            return None
+            return False
         else:
             return self.getCf() == other.getCf()
         
