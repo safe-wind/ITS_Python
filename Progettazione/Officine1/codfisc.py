@@ -4,10 +4,26 @@ class CodiceFiscale:
 
     def  __init__(self,cf:str) -> None:
         
+        self.setCf(cf)
+
+    def setCf(self, cf) -> None:
+
         if not re.fullmatch(r"[A-Z]{6}/d{2}[A-Z]{1}/d{2}[A-Z]{1}/d{3}[A-Z]{1}", cf):
             print("Codice fiscale non corretto")
 
         else:
-            self.cf
+            self._cf =cf 
+
+    def getCf(self) -> str:
+        return self._cf
+    
+    def __hash__(self):
+        return hash(self._cf)
+    
+    def __eq__(self, other):
+        if other is None or not isinstance(other, type(self)) or hash(other) != hash(self):
+            return None
+        else:
+            return self.getCf() == other.getCf()
 
         
