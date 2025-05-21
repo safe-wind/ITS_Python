@@ -1,19 +1,19 @@
+from codfisc import CodiceFiscale
 
 class Persona:
 
-    # nm = name
-    # lm:str = lastname
+    # name = name
+    # lastnm:str = lastname
     # cf:str = cod. fiscale
     # tel:str
     # indirizzo:str
 
-    def __init__(self,nm:str,lm:str,cf:str,tel:str,indirizzo:str) -> None:
+    def __init__(self) -> None:
 
-        self.name = nm
-        self.lastname = lm 
-        self.cf = cf
-        self.tel = tel
-        self.indirizzo = indirizzo
+        self.name:str = ""
+        self.last_nm:str = ""
+        self.cf:CodiceFiscale = "" 
+        self.tel
 
     
 
