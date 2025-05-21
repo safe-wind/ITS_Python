@@ -8,12 +8,11 @@ class Persona:
     # tel:str
     # indirizzo:str
 
-    def __init__(self) -> None:
+    def __init__(self,name:str,last:str,cf:CodiceFiscale) -> None:
 
-        self.name:str = ""
-        self.last_nm:str = ""
-        self.cf:CodiceFiscale = "" 
-        self.tel
+        self.setName(name)
+        self.setLast(last)
+        self.setCf(cf)
 
     
 

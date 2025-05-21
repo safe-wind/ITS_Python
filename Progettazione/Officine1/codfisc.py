@@ -8,7 +8,7 @@ class CodiceFiscale:
 
     def setCf(self, cf) -> None:
 
-        if not re.fullmatch(r"[A-Z]{6}/d{2}[A-Z]{1}/d{2}[A-Z]{1}/d{3}[A-Z]{1}", cf):
+        if not re.fullmatch(r"[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}", cf):
             print("Codice fiscale non corretto")
 
         else:
@@ -25,5 +25,11 @@ class CodiceFiscale:
             return None
         else:
             return self.getCf() == other.getCf()
-
         
+
+# cf1= CodiceFiscale("GDLMRS01R05Z140J")
+# cf2= CodiceFiscale("GDLMRS01R05Z140J")
+
+# print(cf1.__eq__(cf2))
+
+
