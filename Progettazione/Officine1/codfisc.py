@@ -17,7 +17,7 @@ class CodiceFiscale:
     def getCf(self) -> str:
         return self._cf
     
-    def __hash__(self):
+    def __hash__(self) -> int:
         return hash(self._cf)
     
     def __eq__(self, other):
