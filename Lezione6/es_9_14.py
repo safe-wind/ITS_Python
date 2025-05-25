@@ -10,17 +10,28 @@ class LotteryMachine:
         self.items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'A', 'B', 'C', 'D', 'E']
         self.winning_ticket = []
 
-    def selectRandom(self):
+    def giveTicket(self) -> None:
+        self.ticket = random.choices(self.items,k=4)
+        
+        print(f"Your ticket is: {self.ticket}")
+    
+    def selectRandom(self)-> None:
         
         self.winning_ticket = random.choices(self.items, k=4)
 
-    def displayItems(self):
-        print("Winning Ticket:", self.winning_ticket)
-        print("Any ticket matching these 4 items wins a prize!")
+    def displayItems(self)-> None:
+        if self.ticket == self.winning_ticket:
+            print("You won the lotetry!")
+        else:
+            print("Try again, you'll be more lucky ")
+            print("Winning Ticket:", self.winning_ticket)
+
 
         
 
 lottery1 = LotteryMachine()
 
+lottery1.giveTicket()
 lottery1.selectRandom()
+print()
 lottery1.displayItems()
