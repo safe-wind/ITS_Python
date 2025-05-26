@@ -38,4 +38,3 @@ class IntG1900(int):
 
 
 
-
