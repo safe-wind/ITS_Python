@@ -1,9 +1,10 @@
 
-from luoghi import *
+from luoghi import Citta
+
 
 class naz_cit:
 
-    _citta:Citta 
+    _citta:Citta
 
     class _link:
 
@@ -17,9 +18,7 @@ class naz_cit:
             self.list_citta.append(self._citta)
 
         def getCitta(self) -> set:
-            return self._lista_di_citta
+            return frozenset(self._lista_di_citta)
         
-        def rmvCitta(self,citta:Citta) -> None:
-            self._lista_di_citta.remove(citta)
-            
+  
         

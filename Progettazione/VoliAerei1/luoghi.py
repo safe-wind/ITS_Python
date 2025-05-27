@@ -1,4 +1,5 @@
 from custom_types import *
+from naz_cit_link import *
 
 class Citta:
     _nome:str
@@ -24,8 +25,9 @@ class Citta:
 class Nazione:
 
     _nome:str
+    naz_cit: naz_cit._link
 
-    def __init__(self, nome:str)-> None:
+    def __init__(self, nome:str, elenco_citta:set[Citta])-> None:
 
         self.setNome(nome)
 
