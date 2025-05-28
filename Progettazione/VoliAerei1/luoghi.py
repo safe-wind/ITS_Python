@@ -25,7 +25,7 @@ class Citta:
 class Nazione:
 
     _nome:str
-    naz_cit: naz_cit._link
+    _elenco_citta:naz_cit._link
 
     def __init__(self, nome:str, elenco_citta:set[Citta])-> None:
 

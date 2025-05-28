@@ -13,11 +13,11 @@ class naz_cit:
             self._setCitta(citta)
             self._lista_di_citta = set()
 
-        def setCitta(self, citta:Citta) -> None:
-            self._citta = citta
-            self.list_citta.append(self._citta)
+        def addCitta(self, citta:Citta) -> None:
 
-        def getCitta(self) -> set:
+            self.list_citta.append(citta)
+
+        def getCitta(self) -> frozenset:
             return frozenset(self._lista_di_citta)
         
   
