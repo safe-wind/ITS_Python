@@ -15,15 +15,18 @@ class Telefono(str):
         return str.__new__(cls, telefono)
 
 class Dipartimento:
-    pass
+    _nome:str # noto alla nascita
+    _telefono: Telefono # noto alla nascita
+    pass    
+
 
 
 class Impiegato:
 
-    _nome:str 
-    _cognome:str
-    _nascita:datetime.date
-    _stipendio:Importo
+    _nome:str #noto alla nascita
+    _cognome:str #noto alla nascita
+    _nascita:datetime.date # immutabile, noto alla nascita
+    _stipendio:Importo #noto alla nascita
     #_dipartimento:Dipartimento #link afferenza
 
     def __init__(self, nome:str, cognome:str, nascita:datetime.date,stipendio:Importo,dipartimento:Dipartimento)-> None:
