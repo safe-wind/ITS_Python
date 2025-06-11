@@ -1,7 +1,7 @@
 import re
 from datetime import *
 
-class Importo:
+class Importo(float):
     def __new__(cls, valore:int|float|str):
         if valore < 0:
             raise ValueError("Not possible")
@@ -17,17 +17,30 @@ class Telefono(str):
 class Dipartimento:
     _nome:str # noto alla nascita
     _telefono: Telefono # noto alla nascita
-    pass    
+    def __init__(self, nome:str, telefono:Telefono):
+        
+        self._nome = nome
+        self._telefono = telefono
 
-
-
+    def telefono(self)-> None:
+        return self.telefono
+    
+    def nome(self)-> None:
+        return self.nome
+    
+    def set_telefono(self, telefono:Telefono):
+        self._telefono = telefono
+        
+    def set_nome(self, nome:str):
+        self._nome = nome
+        
 class Impiegato:
 
     _nome:str #noto alla nascita
     _cognome:str #noto alla nascita
     _nascita:datetime.date # immutabile, noto alla nascita
     _stipendio:Importo #noto alla nascita
-    #_dipartimento:Dipartimento #link afferenza
+    
 
     def __init__(self, nome:str, cognome:str, nascita:datetime.date,stipendio:Importo,dipartimento:Dipartimento)-> None:
         self.set_nome(nome)
@@ -41,7 +54,7 @@ class Impiegato:
         return self._nome
     def cognome(self) -> str:
         return self._cognome
-    def nascita(self) -> datetime.date:
+    def nascita(self) -> datetime:
         return self._nascita
     def stipendio(self)-> Importo:
         return self._stipendio
@@ -55,19 +68,21 @@ class Impiegato:
         self._dipartimento = v
     def get_dipartimento(self) -> Dipartimento:
         return self._dipartimento
-    def set_afferenza(self, dipartimento:Dipartimento, data:datetime.date):
-        link = afferenza("anna", dipartimento, afferenza)
     
 class afferenza:
-    impiegato:Impiegato
-    dipartimento:Dipartimento
-    #data_afferenza #:datatime.date
+    _impiegato:Impiegato
+    _dipartimento:Dipartimento
+    _data_afferenza:datetime
 
-    def __init__(self, impiegato, dipartimento,data_afferenza):
-        pass
+    def __init__(self, impiegato:Impiegato, dipartimento,data_afferenza):
+        self._impiegato = setImpiegato(impiegato)
     def impiegato(self):
-        pass
+        return self.impiegato
     def dipartimento(self):
         pass
     def data_afferenza(self):
         pass 
+    def setImpiegato(self,impiegato):
+        self.impiegato = impiegato
+    def setDipartimento(self,dipartimento):
+        self.dipartimento = dipartimento
