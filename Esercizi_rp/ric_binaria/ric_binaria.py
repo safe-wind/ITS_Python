@@ -6,7 +6,7 @@ def ricercaBinaria(lista: list[int], x:int) -> bool:
 
     while result != True and indice_min <= indice_max:
         
-        indice_medio = (indice_min + indice_max) // 2 
+        indice_medio = indice_max // 2 
         if lista[indice_medio] == x:
             result = True
         elif lista[indice_medio] > x:
