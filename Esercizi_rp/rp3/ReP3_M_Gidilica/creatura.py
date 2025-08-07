@@ -1,26 +1,19 @@
-from string import ascii_lowercase,ascii_uppercase
 
+import random
 
-class Creatura():
+# Classe base: Creatura
+class Creatura:
+    def __init__(self, nome: str):
+        self.__nome = nome if isinstance(nome, str) else "Creatura Generica"
 
-    def __init__(self,nome:str=None):
-        if nome != None:
-
-            self.set_nome(nome)
+    def setNome(self, nome: str):
+        if isinstance(nome, str):
+            self.__nome = nome
         else:
-            self.set_nome("Creatura Generica")
+            self.__nome = "Creatura Generica"
 
-    def set_nome(self,nome:str=None)-> None:
-        
-        if type(nome) == str:
-            self.nome = nome 
-        if type(nome) == None:
-            self.nome = "Creatura Generica"
-     
-    
-    def get_nome(self)->str:
-        return self.nome
+    def getNome(self) -> str:
+        return self.__nome
 
-    def __str__(self)-> str:
-        return f"\nCreatura: {self.nome}"
-    
+    def __str__(self):
+        return f"Creatura: {self.__nome}"
