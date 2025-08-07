@@ -111,7 +111,6 @@ if __name__ == "__main__":
     for voto in valutazioni3:
         film3.aggiungiValutazione(voto)
 
-    # ✅ Stampa recensioni
     print("\n--- Recensione Film 1 ---")
     film1.recensione()
 
