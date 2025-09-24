@@ -5,8 +5,8 @@ class Film:
     _title:str
 
     def __init__(self, id:int, title:str) -> None:
-        self._id = self.setID(id)
-        self._title = self.setTitle(title)
+        self.setID(id)
+        self.setTitle(title)
 
     def setID(self, id:int) -> None:
         self._id = id

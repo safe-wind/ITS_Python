@@ -1,6 +1,6 @@
 from genere import Azione, Commedia, Drama
 from noleggio import Noleggio
-from film import Film
+
 
 
 

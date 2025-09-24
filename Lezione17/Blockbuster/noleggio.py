@@ -1,5 +1,6 @@
-from film import 
+
 from genere import Azione, Commedia, Drama
+from film import Film
 
 class Noleggio:
 
@@ -12,7 +13,7 @@ class Noleggio:
         self.rented_film:dict[int, list[Azione|Commedia|Drama]] = {}
 
 
-    def isAvaible(self, film:Azione | Commedia | Drama)-> bool:
+    def isAvaible(self, film:Film)-> bool:
         #se è disponibile nell'Inventario negozio
         if film in self.film_list:
             print(f"Il film scelto è disponibile: {film.getTitle()}!")
@@ -64,7 +65,7 @@ class Noleggio:
 
                 for film in v:
 
-                    print(f"\"{film.getTitle()}-{film.getGenere()}-\"\n")
+                    print(f"\"{film.getTitle()}-{film.getGenere()}-\"")
                 
 
                     
