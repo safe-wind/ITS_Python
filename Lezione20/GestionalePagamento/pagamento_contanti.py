@@ -3,12 +3,18 @@ from pagamento import Pagamento
 class PagamentoContanti(Pagamento):
 
 
-    def __init__(self, importo:float):
+    def __init__(self, importo):
         super().__init__()
 
-        self.setPagamento(importo)
+        self.setImporto(importo)
+
+    def setImporto(self,importo:float):
+        self.importo = importo
+        
+    def getImporto(self):
+        return self.importo
     
-    def dettagliPagamento(self):
+    def dettagliImporto(self):
 
         return f"Importo contanti: €{self.getPagamento():.2f}"
     
